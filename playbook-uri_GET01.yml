@@ -1,0 +1,17 @@
+---
+- name: Using Ansible to send an HTTP GET
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Send HTTP GET to requestbin.com
+      ansible.builtin.uri:
+        url: "{{ urltolookup }}"
+        method: GET
+      register: results
+      
+    - name: Display results
+      debug:
+        var: results
+

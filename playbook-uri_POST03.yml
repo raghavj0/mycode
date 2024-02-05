@@ -1,0 +1,22 @@
+---
+- name: Using Ansible to send an HTTP POST
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Send HTTP POST to requestbin.com
+      ansible.builtin.uri:
+        url: "{{ urltolookup }}"
+        method: POST
+        # these are HTTP headers
+        headers:
+          Content-Type: application/json
+          Storage-auth-token: abcdefg717
+        body_format: json      # the body will be formatted as JSON
+        # body is the attachment
+        body:
+          name: student
+          policy: bronze
+          storage_type: flash
+

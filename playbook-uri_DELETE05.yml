@@ -1,0 +1,21 @@
+---
+- name: Using Ansible to send an HTTP DELETE
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Send HTTP DELETE to requestbin.com
+      ansible.builtin.uri:
+        url: "{{ urltolookup }}"
+        method: DELETE
+        headers:
+          Content-Type: application/json
+          Storage-auth-token: abcdefg717
+        body_format: json
+        # body is the attachment
+        body:
+          name: student
+          policy: bronze
+          storage_type: flash
+
