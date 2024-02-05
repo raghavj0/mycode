@@ -1,0 +1,16 @@
+---
+- name: complex variable data                                               
+  hosts: localhost     # only use local host if you're connecting to a single storage device
+  connection: local    # when we connect to storage devices, we typically choose local
+  gather_facts: false  # when we connect to a storage device, we typically set this to false
+
+  vars_files:
+    - ~/mycode/vars/storagevars.yml
+
+  tasks:
+  - name: debug with_dict
+    ansible.builtin.debug:
+      var: item
+    loop: "{{ compute_work|dict2items }}"   ## this line now includes dict2items
+    ## the above is a jinja filter
+

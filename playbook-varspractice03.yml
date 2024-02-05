@@ -1,0 +1,15 @@
+---
+- name: Practice with variable manipulation
+  hosts: localhost
+  gather_facts: False
+
+  vars_files:
+    - ~/mycode/vars/storagevars.yml
+
+  tasks:
+
+    - name: Loop across the list mapped to compute_work.ipv4
+      ansible.builtin.debug:
+        var: item.name
+      loop: "{{ compute_work.ipv4 }}"
+

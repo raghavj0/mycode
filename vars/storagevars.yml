@@ -1,0 +1,17 @@
+---
+compute_work:
+  ipv4:
+     - name: "dellserver"
+       credentials:
+         -  user: "admin"
+            password: "qwerty"
+            ip: 10.10.0.4
+         -  user: "admin"
+            password: "qwerty"
+            rule: "10.10.1.53"
+     - name: "hpserver"
+       credentials:
+         -  user: "admin"
+            password: "qwertyuiop"
+            rule: "172.16.32.11"
+
