@@ -1,0 +1,35 @@
+- name: Use Redfish to gather CPU Inventory, and Virtual Media Information
+  hosts: Redfish
+  connection: local
+  gather_facts: false
+
+  collections:
+    community.general
+
+  tasks:
+  - name: Get CPU Inventory
+    community.general.redfish_info:
+      category: Systems
+      command: GetCpuInventory
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    register: cpuInv
+
+  - name: Display CPU data
+    debug:
+      var: cpuInv
+
+  - name: Get Virtual Media Information
+    community.general.redfish_info:
+      category: Manager
+      command: GetVirtualMedia
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    register: mediaInformation
+
+  - name: Display virtual media information
+    debug:
+      var: mediaInformation.redfish_facts.virtual_media.entries
+

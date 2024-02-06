@@ -1,0 +1,22 @@
+- name: Use Redfish to gather CPU Inventory, and Virtual Media Information
+  hosts: Redfish   # this is the group we are using
+  connection: local   # we don't want to SSH anywhere
+  gather_facts: false  # if we did gather facts, they would be about ourselves (connection:local)
+
+  collections:
+    community.general
+
+  tasks:
+  - name: Get CPU Inventory
+    community.general.redfish_info:
+      category: Systems
+      command: GetCpuInventory
+      baseuri: "{{ baseuri }}"     # needs provided @ runtime (extravars, vault, separate file, etc.)
+      username: "{{ username }}"   # needs provided @ runtime (extravars, vault, separate file, etc.)
+      password: "{{ password }}"   # needs provided @ runtime (extravars, vault, separate file, etc.)
+    register: cpuInv
+
+  - name: Display CPU data
+    debug:
+      var: cpuInv
+
