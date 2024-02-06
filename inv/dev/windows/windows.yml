@@ -1,0 +1,10 @@
+windows:
+  hosts:
+    server2022:
+  vars:
+    ansible_user: student
+    ansible_password: GoAlta3!
+    ansible_connection: winrm 
+    ansible_winrm_transport: basic
+    ansible_port: 5985 # http, 5986 https    
+

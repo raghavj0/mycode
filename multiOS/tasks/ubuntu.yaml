@@ -1,0 +1,9 @@
+---
+# tasks/ubuntu.yml
+# tasks only to be run on ubuntu
+- name: Perform an apt operation (ubuntu uses the apt package installer)
+  apt:
+      name: sl
+      state: present
+  become: yes # run this as sudo
+

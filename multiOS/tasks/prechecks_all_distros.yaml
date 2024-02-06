@@ -1,0 +1,9 @@
+---
+# tasks/prechecks_all_distros.yml
+# precheck tasks to be run on all linux operating systems    
+- name: Assert that the targets are using the correct Kernel
+  assert:
+    that: ansible_facts.kernel >= "5.15.0-83-generic"
+    fail_msg: "kernel appears incorrect: {{ansible_facts.kernel}}"
+    success_msg: "kernel correct: {{ansible_facts.kernel}}"
+

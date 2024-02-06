@@ -1,0 +1,34 @@
+---
+- name: Playbook that cleanly executes blocked tasks per OS
+  hosts: planetexpress:windows   # both planetexpress and windows
+  connection: ssh
+  gather_facts: yes # critical to prechecking
+                    # "yes" works with 
+                    # connection: ssh (linux), winrm, network_cli
+
+  tasks:
+      # Prechecks - phase 1
+      # assertions go here
+      # assertions are prechecks
+      # the GOAL of assert is to STOP the play from proceeding
+      - name: Prechecks (Linux general)
+        ansible.builtin.import_tasks: tasks/prechecks_all_distros.yaml
+        when: ansible_facts['os_family'] != "Windows"
+
+      - name: Precheck (Ubuntu only)
+        ansible.builtin.import_tasks: tasks/prechecks_ubuntu.yaml
+        when: ansible_facts['distribution'] == "Ubuntu"
+
+      # Work to do - we only make it here IF prechecks were passed
+      - name: Tasks specific to Ubuntu
+        ansible.builtin.import_tasks: tasks/ubuntu.yaml
+        when: ansible_facts['distribution'] == "Ubuntu"
+      
+      - name: Tasks specific to CentOS
+        ansible.builtin.import_tasks: tasks/centos.yaml
+        when: ansible_facts['distribution'] == "CentOS"
+
+      - name: Tasks specific to Windows
+        ansible.builtin.import_tasks: tasks/windows.yaml
+        when: ansible_facts['os_family'] == "Windows"
+

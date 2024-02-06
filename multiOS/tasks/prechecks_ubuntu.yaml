@@ -1,0 +1,9 @@
+---
+# tasks/prechecks_ubuntu.yml
+# precheck tasks to be run on ubuntu only    
+- name: Assert the distribution version matched
+  assert: 
+    that: ansible_facts.distribution_version == "22.04"
+    fail_msg: "distribution version is not 22.04"
+    success_msg: "distribution version is 22.04"
+

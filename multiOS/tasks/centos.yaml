@@ -1,0 +1,9 @@
+---
+# tasks/centos.yml
+# tasks only to be run on CentOS
+- name: Perform a yum operation (centos uses the yum package installer)
+  yum:
+      name: sl         # an app named SteamLocomotive
+      state: present   # install this
+  become: yes          # run as sudo
+
