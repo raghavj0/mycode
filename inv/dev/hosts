@@ -28,3 +28,6 @@ sw-2
 
 [eosswitches:vars]
 ansible_network_os=eos
+
+[redfish]
+Redfish     baseuri=aux1-0a3a84c4-d271-4779-a0a5-66b40abdfcbe.live.alta3.com username=root password=null
