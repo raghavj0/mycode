@@ -1,0 +1,21 @@
+---
+- name: A playbook to demo automating against RedFish APIs using community.general collection
+  hosts: redfish_apis    # group name
+  connection: local      # we need to run HTTP(s) to talk to the RedFish APIs
+  gather_facts: false
+
+  # collections:
+  # - community.general      # to update / install, "ansible-galaxy collection install community.general"
+
+  tasks:
+
+         - name: Set BootMode to UEFI
+           community.general.redfish_config:
+               category: Systems
+               command: SetBiosAttributes
+               bios_attributes:
+                 BootMode: "Uefi"
+               baseuri: "{{ baseuri }}"
+               username: "{{ username }}"
+               password: "{{ password }}"
+
