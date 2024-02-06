@@ -1,0 +1,21 @@
+---
+- name: A playbook to demo automating against RedFish APIs using community.general collection
+  hosts: redfish
+  connection: local
+  gather_facts: true
+
+  collections:
+  - community.general
+
+  tasks:
+
+  - name: Set SessionService Session Timeout to 30 minutes
+    community.general.redfish_config:
+      category: Sessions
+      command: SetSessionService
+      sessions_config:
+        SessionTimeout: 1800
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+
