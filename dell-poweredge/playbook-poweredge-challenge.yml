@@ -1,0 +1,53 @@
+---
+- name: PowerEdge Challenge
+  hosts: localhost
+  connection: local
+  gather_facts: False
+
+  collections:
+    - dellemc.openmanage
+
+  vars:
+    idrac_ip: 10.0.0.89            # the idrac to connect to
+    idrac_user: root                   # the login user that will perform the operation
+    idrac_password: r0gerwilc0         # the 0 characters are zeros
+
+
+  tasks:
+
+  - name: 1 Get System Inventory
+    dellemc.openmanage.idrac_system_info:
+      idrac_ip: "{{ idrac_ip }}"
+      idrac_user: "{{ idrac_user }}"
+      idrac_password: "{{ idrac_password }}"
+      validate_certs: False
+    register: results
+  
+  # print to screen
+  - name: Display the gathered facts about System Inv
+    debug:
+      var: results
+
+  - name: 2 Get User info 
+    dellemc.openmanage.idrac_user_info:
+      idrac_ip: "{{ idrac_ip }}"
+      idrac_user: "{{ idrac_user }}"
+      idrac_password: "{{ idrac_password }}"
+      username: "{{ idrac_user }}"
+      validate_certs: False
+    register: results1
+
+  # print to screen
+  - name: Get User info of root user
+    debug:
+      var: results1
+
+  - name: 3 Get the  hostname  
+    command: hostname
+    register: results2
+
+  # print to screen
+  - name: Display the gathered facts about System Inv
+    debug:
+      var: results2
+
