@@ -1,0 +1,43 @@
+---
+- name: Get Installed Firmware Inventory
+  hosts: localhost
+  connection: local
+  gather_facts: False
+
+  collections:
+    - dellemc.openmanage
+
+  vars:
+    idrac_ip: 10.0.0.89            # the idrac to connect to
+    idrac_user: root                   # the login user that will perform the operation
+    idrac_password: r0gerwilc0         # the 0 characters are zeros
+    state: present
+    new_user_name: larry
+    new_user_password: 0rangey0range   # the 0 characters are zeros
+
+
+  tasks:
+
+  - name: Configure a new iDRAC user
+    dellemc.openmanage.idrac_user:
+      idrac_ip: "{{ idrac_ip }}"
+      idrac_user: "{{ idrac_user }}"
+      idrac_password: "{{ idrac_password }}"
+      validate_certs: False
+      state: "{{ state }}"
+      user_name: "{{ new_user_name }}"
+      user_password: "{{ new_user_password }}"
+      privilege: Administrator
+      ipmi_lan_privilege: Administrator    # Intelligent Platform Management Interface LAN privilege level
+      ipmi_serial_privilege: Administrator # Serial privilege applied to user (Administrator, User, Operator, No Access)
+      enable: True              # a user can be created but not enabled
+      sol_enable: True          # enables serial over LAN for a given user
+      protocol_enable: True
+      authentication_protocol: SHA
+      privacy_protocol: AES
+    register: results
+
+  - name: Display the gathered facts about Firmware
+    debug:
+      var: results
+
