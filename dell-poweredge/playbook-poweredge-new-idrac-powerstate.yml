@@ -1,0 +1,35 @@
+- name: Control PowerEdge power state # metadata... name doesn't need to be the first entry in the playbook
+  hosts: idrac   # check the inventory for the name "idrac" to learn more (will have connection info)
+  connection: local   # connection local means "talk to the local machine" (usually indicates an SDK is present)
+                      # an SDK would be employed as a "middle man" or "proxy" to manage the connection to/from
+                      # the target
+  gather_facts: no  # this is a kind of "pre step" that would execute before any tasks, it taps into "setup.py"
+                       # where "setup.py" wants to define the variable "ansible_facts". This generally only works
+                       # for the connection types ssh (Linux), winrm (Windows), network_cli (popular network devices)
+
+  # look in this folder for python scripts I might be calling!!
+  collections:
+    - dellemc.openmanage
+
+  # these are all values that will fill in "{{ variable_value }}"
+  vars:
+    idrac_user: root
+    idrac_password: REPLACE_ME_AT_RUN   # example: ansible-playbook -e idrac_password=correctpass
+
+  tasks:
+  - name: Power on the PowerEdge
+    redfish_powerstate:
+    #  dellemc/openmanage/redfish_powerstate.py --idrac_ip 10.0.0.89 --idrac_user root --idrac_password r0gerwilc0 --validate_certs False
+       baseuri: "{{ idrac_ip }}"
+       username: "{{ idrac_user }}"
+       password:  "{{ idrac_password }}"
+       validate_certs: False
+       # important to place this in quotes - PyYAML 1.1 reads Yes/No/On/Off as BOOLEAN
+       reset_type: "On"   # turns on the device 
+    register: results  # create a variable called "results"
+
+  # print to screen
+  - name: Display facts gathered about the powerstate
+    debug:
+      var: results
+
