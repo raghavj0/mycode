@@ -1,0 +1,53 @@
+# In order to use this solution first run, "python3 -m pip install omsdk"
+- name: Full audit of iDRAC interface  # metadata (name of our play)
+  hosts: localhost      # maps to inventory
+  connection: local     # enable ansible to work with a local library (such as an SDK)
+  gather_facts: False   # turn off the first task which is by default an audit
+
+  tasks:
+
+  - name: PRECHECKING - Check Health of iDRAC
+    block:
+
+    - name: Show status of the Lifecycle Controller
+      dellemc.openmanage.idrac_lifecycle_controller_status_info:
+        idrac_ip: "10.0.0.89"
+        idrac_user: 'root'
+        idrac_password: r0gerwilc0
+        validate_certs: False
+      register: results
+
+    - name: Show us what you learned
+      debug:
+        var: results
+        verbosity: 1   # the solution must be passed -v in order to show this task
+
+    # Start the Prechecks #
+    # The glass is half full
+    - name: ASSERT is a "postive" way to think
+      assert:
+        that: results.lc_status_info.LCReady == true
+        success_msg: iDRAC is healthy
+        fail_msg: iDRAC is unhealthy
+
+    # The glass is half empty
+    - name: FAIL is a "negative" way to think (just reverse the assert logic!)
+      fail:
+        msg: "the fail task did not execute properly"
+      when: results.lc_status_info.LCStatus != "Ready"
+
+    rescue:
+
+    - name: Collect Logs when iDRAC is unhealthy
+      dellemc.openmanage.idrac_lifecycle_controller_logs:
+          idrac_ip: "10.0.0.89"
+          idrac_user: "root"
+          idrac_password: "r0gerwilc0"
+          validate_certs: False
+          share_name: "/tmp/export_lc"  # local export
+      ## when: results.lc_status_info.LCReady != true or results.lc_status_info.LCStatus != "Ready"
+
+    - name: PRECHECK FAIL - Exit the playbook
+      fail:
+        msg: "Precheck failed. Exiting the playbook"
+

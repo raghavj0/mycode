@@ -1,0 +1,20 @@
+# In order to use this solution first run, "python3 -m pip install omsdk"
+- name: Full audit of iDRAC interface  # metadata (name of our play)
+  hosts: localhost      # maps to inventory
+  connection: local     # enable ansible to work with a local library (such as an SDK)
+  gather_facts: False   # turn off the first task which is by default an audit
+
+  tasks:
+
+  - name: Show status of the Lifecycle Controller
+    dellemc.openmanage.idrac_lifecycle_controller_status_info:
+      idrac_ip: "10.0.0.89"
+      idrac_user: 'root'
+      idrac_password: r0gerwilc0
+      validate_certs: False
+    register: results
+
+  - name: Show us what you learned
+    debug:
+      var: results
+
