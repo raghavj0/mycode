@@ -1,0 +1,40 @@
+---
+- hosts: localhost   
+  connection: local   # connection local means "talk to the local machine" (usually indicates an SDK is present)
+                      # an SDK would be employed as a "middle man" or "proxy" to manage the connection to/from
+                      # the target
+  name: Get Installed Firmware Inventory # metadata... name doesn't need to be the first entry in the playbook
+  gather_facts: no  # this is a kind of "pre step" that would execute before any tasks, it taps into "setup.py"
+                       # where "setup.py" wants to define the variable "ansible_facts". This generally only works
+                       # for the connection types ssh (Linux), winrm (Windows), network_cli (popular network devices)
+
+  # look in this folder for python scripts I might be calling!!
+  collections:
+    - dellemc.openmanage
+
+  # these are all values that will fill in "{{ variable_value }}"
+  vars:
+    idrac_ip: 10.0.0.89
+    idrac_user: root
+    idrac_password: r0gerwilc0
+
+  tasks:
+  - name: Get Installed Firmware Inventory.
+    idrac_firmware_info:   #  dellemc/openmanage/idrac_firmware_info.py --idrac_ip 10.0.0.89 --idrac_user root --idrac_password r0gerwilc0 --validate_certs False
+       idrac_ip: "{{ idrac_ip }}"
+       idrac_user: "{{ idrac_user }}"
+       idrac_password:  "{{ idrac_password }}"
+       validate_certs: False
+    register: results  # create a variable called "results"
+
+
+  # print to screen
+  - name: Display the gathered facts about Firmware
+    debug:
+      var: results
+
+  - name: Display just the results.firmware_info.Firmware[]ElementNames
+    debug:
+      var: item.ElementName
+    loop: "{{ results.firmware_info.Firmware }}"
+
