@@ -1,0 +1,10 @@
+[redfish_apis]
+; rf01  baseuri="redfish01.example.com"   username="root"    password="qwerty"
+; rf02  baseuri="redfish02.example.com"   username="root"    password="qwerty"
+; rf03  baseuri="redfish03.example.com"   username="root"    password="qwerty"
+
+; customize the following line so that the "baseuri" reflects the fqdn for aux1
+; to find the fqdn of aux1, click on the channel changer in the upper right corner
+; and then click on aux1. The FQDN is the part after the https:// scheme
+
+rf04 baseuri="aux1-0a3a84c4-d271-4779-a0a5-66b40abdfcbe.live.alta3.com" username="root" password=null

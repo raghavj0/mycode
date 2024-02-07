@@ -1,0 +1,30 @@
+---
+- name: PowerEdge Prechecks Playbook
+  hosts: redfish_apis
+  connection: local
+  gather_facts: false
+
+  tasks:
+  # When connecting to a redfish interface dont use gather_facts
+  # community.general.redfish_info is a possible replacement
+  - name: Get default inventory information
+    community.general.redfish_info:
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    register: results
+
+  # Precheck
+  - name: Assert that an expected condition is true (this is a chicago asset)
+    assert:
+      that:
+          - "'Chicago' in results.redfish_facts.system.entries[0][1].AssetTag"
+      success_msg: "Confirmed a Chicago asset"
+
+  - name: Ensure the correct model is being used
+    assert:
+      that:
+        - results.redfish_facts.system.entries[0][1].Model == "3500"
+      success_msg: "Confrimed model 3500"
+      fail_msg: "This does not appear to be a model 3500. Aborting."
+

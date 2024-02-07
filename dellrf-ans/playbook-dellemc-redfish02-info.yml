@@ -1,0 +1,21 @@
+---
+- name: collecting info (facts)
+  hosts: redfish_apis
+  connection: local
+  gather_facts: false
+
+  tasks:
+  # When connecting to a redfish interface dont use gather_facts
+  # community.general.redfish_info is a possible replacement
+  - name: Get default inventory information
+    community.general.redfish_info:
+      baseuri: "{{ baseuri }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    register: results
+      
+  # print to screen
+  - name: Display the gathered facts about Firmware
+    debug:
+      var: results
+
