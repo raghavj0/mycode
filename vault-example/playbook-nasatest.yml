@@ -1,0 +1,16 @@
+---
+- name: NASA API vault test
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+      - name: Make lookup to nasa
+        uri:
+            url: "https://api.nasa.gov/planetary/apod?api_key={{ apikey }}"
+        register: results  # save returned data within results
+
+      - name: Display the variable "results"
+        debug:
+            var: results   # variable to be displayed
+
