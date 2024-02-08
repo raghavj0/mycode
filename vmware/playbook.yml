@@ -1,0 +1,324 @@
+#### Playbook will perform the following Tasks #########
+## Deploy VM for Demo
+## Create New Volume on PowerStore
+## Attach Volume to VC and Create VMFS Datastore
+## Migrate VM onto newly created Datastore
+## Register VM into PowerStore
+## Create 2 volumes on PowerStore and Map to VM
+## Attach the 2 volumes directly onto VM and create Fielsystems.
+## Cleanup Environment
+
+### Everything has been placed within a single playbook to follow process ###
+---
+- name: PowerStore Ansible Demo
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_files:
+    - vars/vm_vars.yml
+
+  vars:
+
+    ## Base set of PowerStore Variables
+    ps_vars: &ps_vars
+      password: 'Password123!'
+      array_ip: '192.168.3.200'
+      user: 'psadmin'
+      verifycert: false
+    ## Base Set of VC Variables
+    vc_vars: &vc_vars
+      hostname: '192.168.2.83'
+      username: 'administrator@vsphere.local'
+      password: 'Password123!'
+      validate_certs: false
+
+  tasks:
+
+
+###
+###  This Section will create PowerStore volume, Mount to VC and Create VMFS Datastore
+###
+    - name:  Preparing VM "{{ vm_name }}" on local Drive to perform Anisble Demo   /   *** Next task will create Volume "{{ vol_name }}" on PowerStore
+      vmware_guest:
+        <<: *vc_vars
+        name: "{{ vm_name }}"
+        template: 'Ansible-Demo'
+        datacenter: 'DataCenter'
+        esxi_hostname: "{{ esx_host }}"
+        folder: 'vm'
+        datastore: "{{ orig_datastore }}"
+        state: poweredon
+        wait_for_ip_address: no
+
+
+    - pause:
+
+    - name: Creating PowerStore Volume "{{ vol_name }}" for VC Datastore    /   *** Next Task will Map Volume "{{ vol_name }}" on PowerStore
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ vol_name }}"
+        size: '100'
+        cap_unit: 'GB'
+        state: 'present'
+      register: wwn_details
+
+    - set_fact:
+        volume_wwn:  "{{ wwn_details.volume_details.wwn}}"
+
+    - pause:
+
+
+    - name: Mapping PowerStore Volume "{{ vol_name }}" to ESXi Host "{{ esx_host }}"   /   *** Next Task will Rescan "{{ esx_host }}" storage adapters and create VMware Datastore "{{ new_datastore}}" on VC
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ vol_name }}"
+        state: 'present'
+        mapping_state: 'mapped'
+        hostgroup: "{{ hg_name }}"
+      delegate_to: localhost
+
+    - pause:
+
+    - name: Rescan ESXi Storage Adapters
+      vmware_host_scanhba:
+        <<: *vc_vars
+        esxi_hostname: '{{ esx_host }}'
+        refresh_storage: true
+
+
+    - name: Creating VMware Datastore "{{ vol_name }}" from PowerStore mapped volume   /   *** Next Task will VMotion VM "{{ vm_name }}" onto New Datastore "{{ new_datastore }}"
+      vmware_host_datastore:
+        <<: *vc_vars
+        datastore_name: "{{ vol_name }}"
+        datastore_type: 'vmfs'
+        vmfs_device_name: '{{ volume_wwn }}'
+        vmfs_version: 6
+        esxi_hostname: '{{ esx_host }}'
+        state: present
+
+    - pause:
+
+
+    - name: Performing vMotion on VM "{{ vm_name }}" to PowerStore VMFS datastore "{{ vol_name }}"   /   *** Next Task will register VM "{{ vm_name }}" on PowerStore
+      vmware_vmotion:
+        <<: *vc_vars
+        vm_name: "{{ vm_name }}"
+        destination_datastore: '{{ vol_name }}'
+
+    - pause:
+
+
+    - name: Add "{{ vm_name }}" to PowerStore   /   *** Next Task will create PowerStore Volumes for "{{ vm_name }}" VM
+      dellemc.powerstore.host:
+        <<: *ps_vars
+        host_name: "{{ vm_name }}"
+        os_type: 'Linux'
+        initiators: "{{ vm_initiator }}"
+        state: present
+        initiator_state: present-in-host
+      register: createhost_result
+      delegate_to: localhost
+
+    - pause:
+
+###
+### This section creates PoerStore Volumes, Maps them directly to VM and creates Filesystems
+###
+    - name: Create volumes on PowerStore for VM "{{ vm_name }}"   /   *** Next Task will Map Volumes on PowerStore
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ item.volname }}"
+        size: "{{ item.volsize }}"
+        cap_unit: "{{ item.volcapunit }}"
+        state: present
+        description: "Ansible Demo"
+      register: result_vol
+      loop: "{{ volumes }}"
+      delegate_to: localhost
+
+    - pause:
+
+
+    - name: Map volumes on PowerStore to VM "{{ vm_name }}"   /   *** Next Task will Attach Volumes on VM "{{ vm_name }}" and create Filesystems
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ item.volname }}"
+        host: "{{ vm_name }}"
+        mapping_state: mapped
+        state: present
+      loop: "{{ volumes }}"
+      delegate_to: localhost
+
+    - pause:
+
+
+    - name: Get volume details
+      dellemc.powerstore.volume:
+        array_ip: "{{ array_ip }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        vol_name: "{{ item.volname }}"
+        state: "present"
+      register: volume_results
+      loop: "{{ volumes }}"
+      delegate_to: localhost
+
+
+    - name: Set fact for volume wwns
+      set_fact:
+        device_wwns: "{{ device_wwns|default({}) | combine( {item.0.item.volname: item.0.volume_details.wwn | regex_replace('naa.')} ) }}"
+      with_subelements:
+        - "{{ volume_results.results }}"
+        - volume_details.hlu_details
+
+    - name: ISCSI Discovery
+      command: iscsiadm -m discovery -t st -p 192.168.5.200
+      delegate_to: "{{ vm_name }}"
+
+    - name: ISCSI Login
+      command: iscsiadm -m node --login
+      ignore_errors: yes
+      delegate_to: "{{ vm_name }}"
+
+
+    - name: Scan scsi bus on host
+      shell: /usr/bin/rescan-scsi-bus.sh -r
+      delegate_to: "{{ vm_name }}"
+
+
+    - name: Detect the multipath device id based on WWNs
+      shell: 'multipath -l | sed -ne "s/\([^ ]*\).*{{ device_wwns[item.volname] }}.*/\1/p"'
+      loop: "{{ fs }}"
+      register: multipath_id
+      delegate_to: "{{ vm_name }}"
+
+
+    - name: Set facts for multipath id and filesystem
+      set_fact:
+        fs_mpath: "{{ fs_mpath|default([]) + [ {'mount_path': item.item.mount_path, 'volname': item.item.volname, 'fstype': item.item.fstype, 'mpath': item.stdout} ] }}"
+      loop: "{{ multipath_id.results }}"
+      delegate_to: "{{ vm_name }}"
+
+
+    - name: Create file system on volume
+      filesystem:
+        fstype: "{{ item.fstype }}"
+        dev: "/dev/mapper/{{ item.mpath }}"
+        opts: -fK
+      when:
+      - item.mpath is defined
+      - item.mpath|trim != ''
+      loop: "{{ fs_mpath }}"
+      delegate_to: "{{ vm_name }}"
+
+    - name: Ensure the base dir for the mount point exists
+      file:
+        path: "{{ item.mount_path|dirname }}"
+        state: directory
+      when:
+      - item.mount_path is defined
+      - item.mount_path|trim != ''
+      loop: "{{ fs_mpath }}"
+      delegate_to: "{{ vm_name }}"
+
+    - name: Mount the file system
+      mount:
+        src: "/dev/mapper/{{ item.mpath }}"
+        path: "{{ item.mount_path }}"
+        opts: _netdev
+        fstype: "{{ item.fstype }}"
+        state: mounted
+      when:
+      - item.mount_path is defined
+      - item.mount_path|trim != ''
+      loop: "{{ fs_mpath }}"
+      delegate_to: "{{ vm_name }}"
+
+    - name: Message
+      debug:
+        msg:
+          - ''
+          - ''
+          - ''
+          - ' *** NEXT TASK WILL CLEANUP THE ENVIRONMENT ***'
+          - ''
+          - ' *** You can Show Volumes attached by logging into {{ vm_name }} using MobaXterm before continuing ***'
+    - pause:
+
+###
+### The following section will revert and CLENAUP environment for next Demo
+###
+    - name: Unap volumes on PowerStore to VM {{ vm_name }}
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ item.volname }}"
+        host: "{{ vm_name }}"
+        mapping_state: unmapped
+        state: present
+      loop: "{{ volumes }}"
+      delegate_to: localhost
+
+    - name: Delete volumes on PowerStore for VM {{ vm_name }}
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ item.volname }}"
+        size: "{{ item.volsize }}"
+        cap_unit: "{{ item.volcapunit }}"
+        state: absent
+      register: result_vol
+      loop: "{{ volumes }}"
+      delegate_to: localhost
+
+
+    - name: Remove {{ vm_name }} on PowerStore
+      dellemc.powerstore.host:
+        <<: *ps_vars
+        host_name: "{{ vm_name }}"
+        os_type: 'Linux'
+        initiators: "{{ vm_initiator }}"
+        state: absent
+        initiator_state: present-in-host
+      register: createhost_result
+      delegate_to: localhost
+
+    - name:  Delete VM {{ vm_name }} from VC
+      vmware_guest:
+        <<: *vc_vars
+        name: '{{ vm_name }}'
+        template: 'Ansible-Demo'
+        datacenter: 'DataCenter'
+        esxi_hostname: '{{ esx_host }}'
+        folder: 'vm'
+        datastore: "{{ new_datastore }}"
+        state: absent
+        force: yes
+        wait_for_ip_address: no
+
+    - name: Delete VMware Datastore {{ vol_name }} from VC
+      vmware_host_datastore:
+        <<: *vc_vars
+        datastore_name: "{{ vol_name }}"
+        datastore_type: 'vmfs'
+        vmfs_device_name: '{{ volume_wwn }}'
+        vmfs_version: 6
+        esxi_hostname: '{{ esx_host }}'
+        state: absent
+
+    - name: Unmap PowerStore Volume {{ vol_name }} to ESXi Host {{ esx_host }}
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ vol_name }}"
+        state: present
+        mapping_state: unmapped
+        hostgroup: "{{ hg_name }}"
+        # host: "{{ esx_host }}"
+      delegate_to: localhost
+
+    - name: Delete PowerStore Volume {{ vol_name }}
+      dellemc.powerstore.volume:
+        <<: *ps_vars
+        vol_name: "{{ vol_name }}"
+        state: absent
+

@@ -1,0 +1,37 @@
+---
+array_ip: 192.168.3.200
+user: 'psadmin'
+password: 'Password123!'
+verifycert: False
+
+vol_name: 'ps04-AnsibleDemo'  #PowerStore & VC Datastore Name
+esx_host: 'esxi01-ps04.demo.local'
+hg_name: 'ps04-HostGroup'
+new_datastore: 'ps04-AnsibleDemo'
+vm_name: 'demo-ansible-ps04'
+orig_datastore: 'esxi01_ds'
+vm_initiator: 'iqn.1994-05.com.demo-ansible-ps04'
+
+
+volumes:
+  - volname: ps04-demo-ansible-vol01
+    vgname: ''
+    volsize: 50
+    volcapunit: 'GB'
+    voldesc: "ps04 Ansible Demo"
+
+  - volname: ps04-demo-ansible-vol02
+    vgname: ''
+    volsize: 75
+    volcapunit: 'GB'
+    voldesc: "ps04 Ansible Demo"
+
+fs:
+  - mount_path: /data/ps01
+    volname: ps04-demo-ansible-vol01
+    fstype: xfs
+
+  - mount_path: /data/ps02
+    volname: ps04-demo-ansible-vol02
+    fstype: xfs
+
