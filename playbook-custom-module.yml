@@ -1,0 +1,14 @@
+---
+- name: Testing my new module
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  # Grab NEOW data from NASA and convert to YAML suppling an API key (DEMO_KEY) and saving to the current directory
+  - name: Is the Earth at risk of a NEO event
+    nasa_neow:
+      startdate: 2020-06-15
+      enddate: 2020-06-17
+      apikey: DEMO_KEY
+

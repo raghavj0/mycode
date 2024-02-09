@@ -1,0 +1,55 @@
+[1;35m[WARNING]: Collection community.general does not support Ansible version[0m
+[1;35m2.10.17.post0[0m
+
+PLAY [Run this in check mode] **************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [idrac-host1][0m
+
+TASK [Get server information] **************************************************
+[0;35msetting deprecation_warnings=False in ansible.cfg.[0m
+[0;32mok: [idrac-host1][0m
+
+TASK [Display the _info we just collected] *************************************
+[0;32mok: [idrac-host1] => {[0m
+[0;32m    "results.redfish_facts.cpu.entries": [[0m
+[0;32m        [[0m
+[0;32m            {[0m
+[0;32m                "system_uri": "/redfish/v1/Systems/System.Embedded.1"[0m
+[0;32m            },[0m
+[0;32m            [[0m
+[0;32m                {[0m
+[0;32m                    "Id": "CPU.Socket.1",[0m
+[0;32m                    "Manufacturer": "Intel",[0m
+[0;32m                    "MaxSpeedMHz": 4000,[0m
+[0;32m                    "Model": "Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz",[0m
+[0;32m                    "Name": "CPU 1",[0m
+[0;32m                    "ProcessorArchitecture": "x86",[0m
+[0;32m                    "Status": {[0m
+[0;32m                        "Health": "OK",[0m
+[0;32m                        "State": "Enabled"[0m
+[0;32m                    },[0m
+[0;32m                    "TotalCores": 12,[0m
+[0;32m                    "TotalThreads": 24[0m
+[0;32m                },[0m
+[0;32m                {[0m
+[0;32m                    "Id": "CPU.Socket.2",[0m
+[0;32m                    "Manufacturer": "Intel",[0m
+[0;32m                    "MaxSpeedMHz": 4000,[0m
+[0;32m                    "Model": "Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz",[0m
+[0;32m                    "Name": "CPU 2",[0m
+[0;32m                    "ProcessorArchitecture": "x86",[0m
+[0;32m                    "Status": {[0m
+[0;32m                        "Health": "OK",[0m
+[0;32m                        "State": "Enabled"[0m
+[0;32m                    },[0m
+[0;32m                    "TotalCores": 12,[0m
+[0;32m                    "TotalThreads": 24[0m
+[0;32m                }[0m
+[0;32m            ][0m
+[0;32m        ][0m
+[0;32m    ][0m
+[0;32m}[0m
+
+PLAY RECAP *********************************************************************
+[0;32midrac-host1[0m                : [0;32mok=3   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

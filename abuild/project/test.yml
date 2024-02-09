@@ -1,0 +1,23 @@
+---
+- name: Run this in check mode
+  hosts: idrac 
+  connection: local
+
+  collections:
+  - community.general
+
+  tasks:
+
+    - name: Get server information
+      redfish_info:
+        category: Systems
+        command: GetCpuInventory
+        baseuri: "{{ idrac_ip }}"
+        username: "{{ idrac_user }}"
+        password:  "{{ idrac_password }}"
+      register: results
+
+    - name: Display the _info we just collected
+      debug:
+        var: results.redfish_facts.cpu.entries
+

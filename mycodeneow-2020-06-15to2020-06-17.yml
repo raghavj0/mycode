@@ -1,0 +1,1593 @@
+element_count: 44
+links:
+  next: http://api.nasa.gov/neo/rest/v1/feed?start_date=2020-06-17&end_date=2020-06-19&detailed=false&api_key=DEMO_KEY
+  previous: http://api.nasa.gov/neo/rest/v1/feed?start_date=2020-06-13&end_date=2020-06-15&detailed=false&api_key=DEMO_KEY
+  self: http://api.nasa.gov/neo/rest/v1/feed?start_date=2020-06-15&end_date=2020-06-17&detailed=false&api_key=DEMO_KEY
+near_earth_objects:
+  '2020-06-15':
+  - absolute_magnitude_h: 19.68
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 00:24
+      epoch_date_close_approach: 1592180640000
+      miss_distance:
+        astronomical: '0.2700467147'
+        kilometers: '40398413.319617689'
+        lunar: '105.0481720183'
+        miles: '25102410.0225905482'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '51270.7711574297'
+        kilometers_per_second: '14.2418808771'
+        miles_per_hour: '31857.663333904'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 2259.5659936518
+        estimated_diameter_min: 1010.5086322905
+      kilometers:
+        estimated_diameter_max: 0.6887156928
+        estimated_diameter_min: 0.3080030213
+      meters:
+        estimated_diameter_max: 688.7156928262
+        estimated_diameter_min: 308.003021266
+      miles:
+        estimated_diameter_max: 0.4279479588
+        estimated_diameter_min: 0.1913841453
+    id: '2524530'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/2524530?api_key=DEMO_KEY
+    name: 524530 (2002 XC91)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2524530
+    neo_reference_id: '2524530'
+  - absolute_magnitude_h: 20.24
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 04:34
+      epoch_date_close_approach: 1592195640000
+      miss_distance:
+        astronomical: '0.0957623885'
+        kilometers: '14325849.345712495'
+        lunar: '37.2515691265'
+        miles: '8901670.007502631'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '49769.4595452282'
+        kilometers_per_second: '13.8248498737'
+        miles_per_hour: '30924.8066824225'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1745.9227740372
+        estimated_diameter_min: 780.8004012424
+      kilometers:
+        estimated_diameter_max: 0.5321572445
+        estimated_diameter_min: 0.2379879547
+      meters:
+        estimated_diameter_max: 532.1572444975
+        estimated_diameter_min: 237.9879546831
+      miles:
+        estimated_diameter_max: 0.3306670792
+        estimated_diameter_min: 0.1478788134
+    id: '3283227'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3283227?api_key=DEMO_KEY
+    name: (2005 MR5)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3283227
+    neo_reference_id: '3283227'
+  - absolute_magnitude_h: 22.68
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 17:37
+      epoch_date_close_approach: 1592242620000
+      miss_distance:
+        astronomical: '0.2770713919'
+        kilometers: '41449290.066175253'
+        lunar: '107.7807714491'
+        miles: '25755394.5536063714'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '20586.5245472869'
+        kilometers_per_second: '5.7184790409'
+        miles_per_hour: '12791.6657666183'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 567.5773160554
+        estimated_diameter_min: 253.8282922374
+      kilometers:
+        estimated_diameter_max: 0.1729975604
+        estimated_diameter_min: 0.077366861
+      meters:
+        estimated_diameter_max: 172.9975603978
+        estimated_diameter_min: 77.3668609982
+      miles:
+        estimated_diameter_max: 0.1074956671
+        estimated_diameter_min: 0.0480735238
+    id: '3387092'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3387092?api_key=DEMO_KEY
+    name: (2007 SG11)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3387092
+    neo_reference_id: '3387092'
+  - absolute_magnitude_h: 21.24
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 05:18
+      epoch_date_close_approach: 1592198280000
+      miss_distance:
+        astronomical: '0.1347694483'
+        kilometers: '20161222.406755121'
+        lunar: '52.4253153887'
+        miles: '12527602.6909018298'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '33857.2812537644'
+        kilometers_per_second: '9.4048003483'
+        miles_per_hour: '21037.5978990404'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1101.602797174
+        estimated_diameter_min: 492.651747737
+      kilometers:
+        estimated_diameter_max: 0.3357685218
+        estimated_diameter_min: 0.1501602479
+      meters:
+        estimated_diameter_max: 335.768521834
+        estimated_diameter_min: 150.1602479051
+      miles:
+        estimated_diameter_max: 0.2086368222
+        estimated_diameter_min: 0.0933052234
+    id: '3547628'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3547628?api_key=DEMO_KEY
+    name: (2010 SF15)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3547628
+    neo_reference_id: '3547628'
+  - absolute_magnitude_h: 27.5
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 18:30
+      epoch_date_close_approach: 1592245800000
+      miss_distance:
+        astronomical: '0.4036041787'
+        kilometers: '60378325.456619369'
+        lunar: '157.0020255143'
+        miles: '37517351.7360265322'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '63966.6659173396'
+        kilometers_per_second: '17.7685183104'
+        miles_per_hour: '39746.3986084714'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 61.6630539546
+        estimated_diameter_min: 27.5765560686
+      kilometers:
+        estimated_diameter_max: 0.0187948982
+        estimated_diameter_min: 0.008405334
+      meters:
+        estimated_diameter_max: 18.7948982439
+        estimated_diameter_min: 8.4053340207
+      miles:
+        estimated_diameter_max: 0.0116786047
+        estimated_diameter_min: 0.0052228308
+    id: '3825098'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3825098?api_key=DEMO_KEY
+    name: (2018 LE1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3825098
+    neo_reference_id: '3825098'
+  - absolute_magnitude_h: 26.8
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 17:31
+      epoch_date_close_approach: 1592242260000
+      miss_distance:
+        astronomical: '0.345065876'
+        kilometers: '51621120.05928412'
+        lunar: '134.230625764'
+        miles: '32075876.626676056'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '44855.6382984258'
+        kilometers_per_second: '12.4598995273'
+        miles_per_hour: '27871.549252708'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 85.1187093863
+        estimated_diameter_min: 38.066244069
+      kilometers:
+        estimated_diameter_max: 0.0259441818
+        estimated_diameter_min: 0.0116025908
+      meters:
+        estimated_diameter_max: 25.9441817907
+        estimated_diameter_min: 11.6025908209
+      miles:
+        estimated_diameter_max: 0.0161209622
+        estimated_diameter_min: 0.0072095135
+    id: '3836180'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3836180?api_key=DEMO_KEY
+    name: (2018 VV6)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3836180
+    neo_reference_id: '3836180'
+  - absolute_magnitude_h: 27.63
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 07:15
+      epoch_date_close_approach: 1592205300000
+      miss_distance:
+        astronomical: '0.1678601881'
+        kilometers: '25111526.597559347'
+        lunar: '65.2976131709'
+        miles: '15603579.0801471086'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '48610.5974046155'
+        kilometers_per_second: '13.5029437235'
+        miles_per_hour: '30204.7348151068'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 58.0797890097
+        estimated_diameter_min: 25.9740712689
+      kilometers:
+        estimated_diameter_max: 0.0177027191
+        estimated_diameter_min: 0.0079168967
+      meters:
+        estimated_diameter_max: 17.7027191237
+        estimated_diameter_min: 7.9168966694
+      miles:
+        estimated_diameter_max: 0.0109999563
+        estimated_diameter_min: 0.00491933
+    id: '3838904'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3838904?api_key=DEMO_KEY
+    name: (2019 ED1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3838904
+    neo_reference_id: '3838904'
+  - absolute_magnitude_h: 23.4
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 08:41
+      epoch_date_close_approach: 1592210460000
+      miss_distance:
+        astronomical: '0.4388621378'
+        kilometers: '65652841.038526486'
+        lunar: '170.7173716042'
+        miles: '40794783.7420820668'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '58185.9894420943'
+        kilometers_per_second: '16.162774845'
+        miles_per_hour: '36154.5110508391'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 407.4037573197
+        estimated_diameter_min: 182.1964991311
+      kilometers:
+        estimated_diameter_max: 0.1241766613
+        estimated_diameter_min: 0.0555334912
+      meters:
+        estimated_diameter_max: 124.1766612574
+        estimated_diameter_min: 55.5334911581
+      miles:
+        estimated_diameter_max: 0.0771597762
+        estimated_diameter_min: 0.0345069009
+    id: '3842897'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3842897?api_key=DEMO_KEY
+    name: (2019 LD6)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3842897
+    neo_reference_id: '3842897'
+  - absolute_magnitude_h: 22.9
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 12:55
+      epoch_date_close_approach: 1592225700000
+      miss_distance:
+        astronomical: '0.2610687857'
+        kilometers: '39055334.264206459'
+        lunar: '101.5557576373'
+        miles: '24267859.3961847742'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '28504.8822355613'
+        kilometers_per_second: '7.9180228432'
+        miles_per_hour: '17711.8252979797'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 512.8909429502
+        estimated_diameter_min: 229.3718026961
+      kilometers:
+        estimated_diameter_max: 0.1563291544
+        estimated_diameter_min: 0.0699125232
+      meters:
+        estimated_diameter_max: 156.3291544087
+        estimated_diameter_min: 69.9125232246
+      miles:
+        estimated_diameter_max: 0.097138403
+        estimated_diameter_min: 0.0434416145
+    id: '54006013'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54006013?api_key=DEMO_KEY
+    name: (2020 DJ4)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54006013
+    neo_reference_id: '54006013'
+  - absolute_magnitude_h: 20.1
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 20:45
+      epoch_date_close_approach: 1592253900000
+      miss_distance:
+        astronomical: '0.3403193513'
+        kilometers: '50911050.074261731'
+        lunar: '132.3842276557'
+        miles: '31634659.5974886478'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '65585.0669214892'
+        kilometers_per_second: '18.2180741449'
+        miles_per_hour: '40752.0100546331'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1862.1944587557
+        estimated_diameter_min: 832.7986794202
+      kilometers:
+        estimated_diameter_max: 0.5675968529
+        estimated_diameter_min: 0.2538370294
+      meters:
+        estimated_diameter_max: 567.5968528656
+        estimated_diameter_min: 253.8370293645
+      miles:
+        estimated_diameter_max: 0.3526882241
+        estimated_diameter_min: 0.1577269688
+    id: '54016281'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54016281?api_key=DEMO_KEY
+    name: (2020 FJ2)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54016281
+    neo_reference_id: '54016281'
+  - absolute_magnitude_h: 21.8
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 15:59
+      epoch_date_close_approach: 1592236740000
+      miss_distance:
+        astronomical: '0.2443127767'
+        kilometers: '36548671.008105629'
+        lunar: '95.0376701363'
+        miles: '22710291.0742465202'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '56691.8752196113'
+        kilometers_per_second: '15.7477431166'
+        miles_per_hour: '35226.1265774302'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 851.1870938635
+        estimated_diameter_min: 380.6624406898
+      kilometers:
+        estimated_diameter_max: 0.2594418179
+        estimated_diameter_min: 0.1160259082
+      meters:
+        estimated_diameter_max: 259.4418179074
+        estimated_diameter_min: 116.0259082094
+      miles:
+        estimated_diameter_max: 0.1612096218
+        estimated_diameter_min: 0.0720951346
+    id: '54017142'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017142?api_key=DEMO_KEY
+    name: (2020 JL3)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017142
+    neo_reference_id: '54017142'
+  - absolute_magnitude_h: 20.13
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 22:16
+      epoch_date_close_approach: 1592259360000
+      miss_distance:
+        astronomical: '0.2673827924'
+        kilometers: '39999896.217692188'
+        lunar: '104.0119062436'
+        miles: '24854782.9780726744'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '42189.4745802043'
+        kilometers_per_second: '11.7192984945'
+        miles_per_hour: '26214.8988023497'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1836.6441929268
+        estimated_diameter_min: 821.3722531729
+      kilometers:
+        estimated_diameter_max: 0.5598091321
+        estimated_diameter_min: 0.2503542548
+      meters:
+        estimated_diameter_max: 559.8091320902
+        estimated_diameter_min: 250.3542547558
+      miles:
+        estimated_diameter_max: 0.3478491602
+        estimated_diameter_min: 0.1555628736
+    id: '54017275'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017275?api_key=DEMO_KEY
+    name: (2020 KZ5)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017275
+    neo_reference_id: '54017275'
+  - absolute_magnitude_h: 19.88
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 23:01
+      epoch_date_close_approach: 1592262060000
+      miss_distance:
+        astronomical: '0.4619691844'
+        kilometers: '69109605.991877228'
+        lunar: '179.7060127316'
+        miles: '42942717.8830646264'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '45820.2689445398'
+        kilometers_per_second: '12.7278524846'
+        miles_per_hour: '28470.9332227892'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 2060.7486784504
+        estimated_diameter_min: 921.5948259116
+      kilometers:
+        estimated_diameter_max: 0.6281161771
+        estimated_diameter_min: 0.2809020939
+      meters:
+        estimated_diameter_max: 628.116177092
+        estimated_diameter_min: 280.902093949
+      miles:
+        estimated_diameter_max: 0.3902931771
+        estimated_diameter_min: 0.174544415
+    id: '54017598'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017598?api_key=DEMO_KEY
+    name: (2020 MF2)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017598
+    neo_reference_id: '54017598'
+  - absolute_magnitude_h: 25.8
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 14:25
+      epoch_date_close_approach: 1592231100000
+      miss_distance:
+        astronomical: '0.3418017996'
+        kilometers: '51132821.182326852'
+        lunar: '132.9609000444'
+        miles: '31772461.7740684776'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '21665.3640524744'
+        kilometers_per_second: '6.0181566812'
+        miles_per_hour: '13462.0146802722'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 134.9040630575
+        estimated_diameter_min: 60.3309310875
+      kilometers:
+        estimated_diameter_max: 0.0411187571
+        estimated_diameter_min: 0.0183888672
+      meters:
+        estimated_diameter_max: 41.1187571041
+        estimated_diameter_min: 18.388867207
+      miles:
+        estimated_diameter_max: 0.0255500032
+        estimated_diameter_min: 0.0114263088
+    id: '54105264'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54105264?api_key=DEMO_KEY
+    name: (2021 AA5)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54105264
+    neo_reference_id: '54105264'
+  - absolute_magnitude_h: 26.97
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 04:55
+      epoch_date_close_approach: 1592196900000
+      miss_distance:
+        astronomical: '0.2550007007'
+        kilometers: '38147561.673227509'
+        lunar: '99.1952725723'
+        miles: '23703795.6641332642'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '36515.3740766626'
+        kilometers_per_second: '10.1431594657'
+        miles_per_hour: '22689.2334089129'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 78.7091151375
+        estimated_diameter_min: 35.1997863793
+      kilometers:
+        estimated_diameter_max: 0.0239905375
+        estimated_diameter_min: 0.0107288945
+      meters:
+        estimated_diameter_max: 23.9905375262
+        estimated_diameter_min: 10.7288945451
+      miles:
+        estimated_diameter_max: 0.0149070243
+        estimated_diameter_min: 0.0066666239
+    id: '54356838'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54356838?api_key=DEMO_KEY
+    name: (2023 HW4)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54356838
+    neo_reference_id: '54356838'
+  - absolute_magnitude_h: 21.53
+    close_approach_data:
+    - close_approach_date: '2020-06-15'
+      close_approach_date_full: 2020-Jun-15 07:39
+      epoch_date_close_approach: 1592206740000
+      miss_distance:
+        astronomical: '0.4420617912'
+        kilometers: '66131502.371904744'
+        lunar: '171.9620367768'
+        miles: '41092210.1027997072'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '79331.5282765309'
+        kilometers_per_second: '22.0365356324'
+        miles_per_hour: '49293.5265560478'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 963.8845742724
+        estimated_diameter_min: 431.0622861073
+      kilometers:
+        estimated_diameter_max: 0.2937920088
+        estimated_diameter_min: 0.1313877806
+      meters:
+        estimated_diameter_max: 293.7920088369
+        estimated_diameter_min: 131.3877806011
+      miles:
+        estimated_diameter_max: 0.1825538343
+        estimated_diameter_min: 0.0816405566
+    id: '54382895'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54382895?api_key=DEMO_KEY
+    name: (2023 RB9)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54382895
+    neo_reference_id: '54382895'
+  '2020-06-16':
+  - absolute_magnitude_h: 18.64
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 12:58
+      epoch_date_close_approach: 1592312280000
+      miss_distance:
+        astronomical: '0.4440444216'
+        kilometers: '66428099.656741992'
+        lunar: '172.7332800024'
+        miles: '41276507.1096318096'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '27042.3275699461'
+        kilometers_per_second: '7.5117576583'
+        miles_per_hour: '16803.0507058923'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 3647.7496965659
+        estimated_diameter_min: 1631.3232572851
+      kilometers:
+        estimated_diameter_max: 1.1118340719
+        estimated_diameter_min: 0.4972273129
+      meters:
+        estimated_diameter_max: 1111.8340719346
+        estimated_diameter_min: 497.2273129092
+      miles:
+        estimated_diameter_max: 0.6908614491
+        estimated_diameter_min: 0.3089626326
+    id: '2276111'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/2276111?api_key=DEMO_KEY
+    name: 276111 (2002 GM9)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2276111
+    neo_reference_id: '2276111'
+  - absolute_magnitude_h: 23.6
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 07:15
+      epoch_date_close_approach: 1592291700000
+      miss_distance:
+        astronomical: '0.1032476878'
+        kilometers: '15445634.177304986'
+        lunar: '40.1633505542'
+        miles: '9597472.0370853668'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '43424.2718268754'
+        kilometers_per_second: '12.0622977297'
+        miles_per_hour: '26982.1537915382'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 371.5566426699
+        estimated_diameter_min: 166.1651821003
+      kilometers:
+        estimated_diameter_max: 0.1132504611
+        estimated_diameter_min: 0.0506471459
+      meters:
+        estimated_diameter_max: 113.2504610618
+        estimated_diameter_min: 50.6471458835
+      miles:
+        estimated_diameter_max: 0.0703705522
+        estimated_diameter_min: 0.0314706677
+    id: '3157021'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3157021?api_key=DEMO_KEY
+    name: (2003 ME1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3157021
+    neo_reference_id: '3157021'
+  - absolute_magnitude_h: 22.78
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 02:16
+      epoch_date_close_approach: 1592273760000
+      miss_distance:
+        astronomical: '0.2985639313'
+        kilometers: '44664528.181306331'
+        lunar: '116.1413692757'
+        miles: '27753250.8765201278'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '36186.785288006'
+        kilometers_per_second: '10.0518848022'
+        miles_per_hour: '22485.0611140946'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 542.0321288269
+        estimated_diameter_min: 242.4041372092
+      kilometers:
+        estimated_diameter_max: 0.1652113876
+        estimated_diameter_min: 0.0738847787
+      meters:
+        estimated_diameter_max: 165.2113875797
+        estimated_diameter_min: 73.884778657
+      miles:
+        estimated_diameter_max: 0.1026575651
+        estimated_diameter_min: 0.0459098588
+    id: '3678630'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3678630?api_key=DEMO_KEY
+    name: (2014 OL339)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3678630
+    neo_reference_id: '3678630'
+  - absolute_magnitude_h: 21.5
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 18:40
+      epoch_date_close_approach: 1592332800000
+      miss_distance:
+        astronomical: '0.4084176561'
+        kilometers: '61098411.422952507'
+        lunar: '158.8744682229'
+        miles: '37964792.4074063166'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '23224.0476286834'
+        kilometers_per_second: '6.4511243413'
+        miles_per_hour: '14430.5200390561'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 977.2935443908
+        estimated_diameter_min: 437.0589598459
+      kilometers:
+        estimated_diameter_max: 0.2978790628
+        estimated_diameter_min: 0.1332155667
+      meters:
+        estimated_diameter_max: 297.8790627982
+        estimated_diameter_min: 133.2155666981
+      miles:
+        estimated_diameter_max: 0.1850934111
+        estimated_diameter_min: 0.0827762899
+    id: '3742124'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3742124?api_key=DEMO_KEY
+    name: (2016 CW31)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3742124
+    neo_reference_id: '3742124'
+  - absolute_magnitude_h: 24.14
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 09:03
+      epoch_date_close_approach: 1592298180000
+      miss_distance:
+        astronomical: '0.4677605592'
+        kilometers: '69975983.326328904'
+        lunar: '181.9588575288'
+        miles: '43481059.7954467152'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '79382.017673168'
+        kilometers_per_second: '22.0505604648'
+        miles_per_hour: '49324.8987036416'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 289.7510577189
+        estimated_diameter_min: 129.5806123224
+      kilometers:
+        estimated_diameter_max: 0.0883161196
+        estimated_diameter_min: 0.0394961694
+      meters:
+        estimated_diameter_max: 88.3161195666
+        estimated_diameter_min: 39.496169372
+      miles:
+        estimated_diameter_max: 0.0548770755
+        estimated_diameter_min: 0.0245417743
+    id: '3836314'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3836314?api_key=DEMO_KEY
+    name: (2018 WX1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3836314
+    neo_reference_id: '3836314'
+  - absolute_magnitude_h: 27.0
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 01:46
+      epoch_date_close_approach: 1592271960000
+      miss_distance:
+        astronomical: '0.0785155533'
+        kilometers: '11745759.535551471'
+        lunar: '30.5425502337'
+        miles: '7298476.5405374598'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '11184.6656672024'
+        kilometers_per_second: '3.1068515742'
+        miles_per_hour: '6949.7162863792'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 77.6291855923
+        estimated_diameter_min: 34.7168272045
+      kilometers:
+        estimated_diameter_max: 0.023661375
+        estimated_diameter_min: 0.0105816886
+      meters:
+        estimated_diameter_max: 23.6613750114
+        estimated_diameter_min: 10.5816885933
+      miles:
+        estimated_diameter_max: 0.0147024923
+        estimated_diameter_min: 0.0065751544
+    id: '3842752'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3842752?api_key=DEMO_KEY
+    name: (2019 LB1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3842752
+    neo_reference_id: '3842752'
+  - absolute_magnitude_h: 22.56
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 05:11
+      epoch_date_close_approach: 1592284260000
+      miss_distance:
+        astronomical: '0.1244541957'
+        kilometers: '18618082.589283159'
+        lunar: '48.4126821273'
+        miles: '11568740.0713752342'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '26148.9536174697'
+        kilometers_per_second: '7.2635982271'
+        miles_per_hour: '16247.9428741439'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 599.8256454399
+        estimated_diameter_min: 268.2501835703
+      kilometers:
+        estimated_diameter_max: 0.1828268509
+        estimated_diameter_min: 0.0817626533
+      meters:
+        estimated_diameter_max: 182.8268508796
+        estimated_diameter_min: 81.7626533358
+      miles:
+        estimated_diameter_max: 0.1136033032
+        estimated_diameter_min: 0.0508049417
+    id: '54016609'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54016609?api_key=DEMO_KEY
+    name: (2020 HV1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54016609
+    neo_reference_id: '54016609'
+  - absolute_magnitude_h: 22.8
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 12:21
+      epoch_date_close_approach: 1592310060000
+      miss_distance:
+        astronomical: '0.1763974923'
+        kilometers: '26388689.121421401'
+        lunar: '68.6186245047'
+        miles: '16397171.0731252938'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '29893.8473924921'
+        kilometers_per_second: '8.3038464979'
+        miles_per_hour: '18574.8742311849'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 537.0627483999
+        estimated_diameter_min: 240.181762721
+      kilometers:
+        estimated_diameter_max: 0.1636967205
+        estimated_diameter_min: 0.0732073989
+      meters:
+        estimated_diameter_max: 163.696720474
+        estimated_diameter_min: 73.2073989347
+      miles:
+        estimated_diameter_max: 0.1017163949
+        estimated_diameter_min: 0.0454889547
+    id: '54017217'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017217?api_key=DEMO_KEY
+    name: (2020 JQ3)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017217
+    neo_reference_id: '54017217'
+  - absolute_magnitude_h: 24.8
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 10:33
+      epoch_date_close_approach: 1592303580000
+      miss_distance:
+        astronomical: '0.0092366558'
+        kilometers: '1381784.033603146'
+        lunar: '3.5930591062'
+        miles: '858600.7846335748'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '38725.7955284657'
+        kilometers_per_second: '10.7571654246'
+        miles_per_hour: '24062.7033382291'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 213.8085311752
+        estimated_diameter_min: 95.6180819754
+      kilometers:
+        estimated_diameter_max: 0.0651688382
+        estimated_diameter_min: 0.0291443905
+      meters:
+        estimated_diameter_max: 65.1688382168
+        estimated_diameter_min: 29.1443904535
+      miles:
+        estimated_diameter_max: 0.0404940262
+        estimated_diameter_min: 0.018109479
+    id: '54017290'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017290?api_key=DEMO_KEY
+    name: (2020 KP6)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017290
+    neo_reference_id: '54017290'
+  - absolute_magnitude_h: 22.7
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 13:12
+      epoch_date_close_approach: 1592313120000
+      miss_distance:
+        astronomical: '0.2950635425'
+        kilometers: '44140877.472654475'
+        lunar: '114.7797180325'
+        miles: '27427869.414302755'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '26769.7475690877'
+        kilometers_per_second: '7.4360409914'
+        miles_per_hour: '16633.6800936923'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 562.3737359442
+        estimated_diameter_min: 251.5011804664
+      kilometers:
+        estimated_diameter_max: 0.1714115092
+        estimated_diameter_min: 0.0766575574
+      meters:
+        estimated_diameter_max: 171.4115092306
+        estimated_diameter_min: 76.6575573531
+      miles:
+        estimated_diameter_max: 0.1065101409
+        estimated_diameter_min: 0.0476327831
+    id: '54017291'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017291?api_key=DEMO_KEY
+    name: (2020 KQ6)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017291
+    neo_reference_id: '54017291'
+  - absolute_magnitude_h: 21.0
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 03:22
+      epoch_date_close_approach: 1592277720000
+      miss_distance:
+        astronomical: '0.0807610519'
+        kilometers: '12081681.343199453'
+        lunar: '31.4160491891'
+        miles: '7507208.6727723314'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '130116.8369953199'
+        kilometers_per_second: '36.143565832'
+        miles_per_hour: '80849.5424096753'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1230.3396778159
+        estimated_diameter_min: 550.2246310023
+      kilometers:
+        estimated_diameter_max: 0.3750075218
+        estimated_diameter_min: 0.1677084622
+      meters:
+        estimated_diameter_max: 375.0075217981
+        estimated_diameter_min: 167.7084621628
+      miles:
+        estimated_diameter_max: 0.2330187988
+        estimated_diameter_min: 0.1042091748
+    id: '54017312'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017312?api_key=DEMO_KEY
+    name: (2020 KC7)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017312
+    neo_reference_id: '54017312'
+  - absolute_magnitude_h: 21.4
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 08:00
+      epoch_date_close_approach: 1592294400000
+      miss_distance:
+        astronomical: '0.3624683363'
+        kilometers: '54224491.052923681'
+        lunar: '141.0001828207'
+        miles: '33693536.3502455578'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '60398.7481699718'
+        kilometers_per_second: '16.7774300472'
+        miles_per_hour: '37529.4332726139'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1023.3519701574
+        estimated_diameter_min: 457.6569140361
+      kilometers:
+        estimated_diameter_max: 0.3119176705
+        estimated_diameter_min: 0.1394938229
+      meters:
+        estimated_diameter_max: 311.9176705226
+        estimated_diameter_min: 139.4938229344
+      miles:
+        estimated_diameter_max: 0.1938165949
+        estimated_diameter_min: 0.0866774163
+    id: '54017537'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017537?api_key=DEMO_KEY
+    name: (2020 LY1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017537
+    neo_reference_id: '54017537'
+  - absolute_magnitude_h: 19.84
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 02:38
+      epoch_date_close_approach: 1592275080000
+      miss_distance:
+        astronomical: '0.4766632999'
+        kilometers: '71307814.372211213'
+        lunar: '185.4220236611'
+        miles: '44308621.2328242194'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '80629.8659411238'
+        kilometers_per_second: '22.3971849836'
+        miles_per_hour: '50100.2630899166'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 2099.0608568135
+        estimated_diameter_min: 938.7285529488
+      kilometers:
+        estimated_diameter_max: 0.6397937287
+        estimated_diameter_min: 0.2861244538
+      meters:
+        estimated_diameter_max: 639.7937286834
+        estimated_diameter_min: 286.1244537828
+      miles:
+        estimated_diameter_max: 0.397549269
+        estimated_diameter_min: 0.177789438
+    id: '54049886'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54049886?api_key=DEMO_KEY
+    name: (2020 OW6)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54049886
+    neo_reference_id: '54049886'
+  - absolute_magnitude_h: 27.15
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 06:47
+      epoch_date_close_approach: 1592290020000
+      miss_distance:
+        astronomical: '0.2251539908'
+        kilometers: '33682557.445679596'
+        lunar: '87.5849024212'
+        miles: '20929370.6889305848'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '40336.7862400276'
+        kilometers_per_second: '11.2046628445'
+        miles_per_hour: '25063.7103167549'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 72.4477713214
+        estimated_diameter_min: 32.3996282986
+      kilometers:
+        estimated_diameter_max: 0.02208208
+        estimated_diameter_min: 0.0098754064
+      meters:
+        estimated_diameter_max: 22.0820799921
+        estimated_diameter_min: 9.8754063894
+      miles:
+        estimated_diameter_max: 0.0137211641
+        estimated_diameter_min: 0.0061362911
+    id: '54278446'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54278446?api_key=DEMO_KEY
+    name: (2022 JW1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54278446
+    neo_reference_id: '54278446'
+  - absolute_magnitude_h: 26.63
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 10:52
+      epoch_date_close_approach: 1592304720000
+      miss_distance:
+        astronomical: '0.198856166'
+        kilometers: '29748458.86996642'
+        lunar: '77.355048574'
+        miles: '18484835.188599796'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '37617.6320155883'
+        kilometers_per_second: '10.4493422266'
+        miles_per_hour: '23374.1336265748'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 92.0502622211
+        estimated_diameter_min: 41.1661287346
+      kilometers:
+        estimated_diameter_max: 0.028056919
+        estimated_diameter_min: 0.0125474356
+      meters:
+        estimated_diameter_max: 28.0569190272
+        estimated_diameter_min: 12.5474356368
+      miles:
+        estimated_diameter_max: 0.0174337558
+        estimated_diameter_min: 0.0077966126
+    id: '54327904'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54327904?api_key=DEMO_KEY
+    name: (2022 WR2)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54327904
+    neo_reference_id: '54327904'
+  - absolute_magnitude_h: 25.66
+    close_approach_data:
+    - close_approach_date: '2020-06-16'
+      close_approach_date_full: 2020-Jun-16 03:57
+      epoch_date_close_approach: 1592279820000
+      miss_distance:
+        astronomical: '0.3246119748'
+        kilometers: '48561260.006573676'
+        lunar: '126.2740581972'
+        miles: '30174567.7547856888'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '31219.0559574913'
+        kilometers_per_second: '8.6719599882'
+        miles_per_hour: '19398.3072975868'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 143.8881503953
+        estimated_diameter_min: 64.3487370881
+      kilometers:
+        estimated_diameter_max: 0.0438571068
+        estimated_diameter_min: 0.0196134944
+      meters:
+        estimated_diameter_max: 43.8571068371
+        estimated_diameter_min: 19.6134944368
+      miles:
+        estimated_diameter_max: 0.0272515343
+        estimated_diameter_min: 0.0121872567
+    id: '54359833'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54359833?api_key=DEMO_KEY
+    name: (2023 KJ2)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54359833
+    neo_reference_id: '54359833'
+  '2020-06-17':
+  - absolute_magnitude_h: 20.8
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 12:36
+      epoch_date_close_approach: 1592397360000
+      miss_distance:
+        astronomical: '0.435082803'
+        kilometers: '65087460.60242961'
+        lunar: '169.247210367'
+        miles: '40443472.629604218'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '45803.5012653113'
+        kilometers_per_second: '12.7231947959'
+        miles_per_hour: '28460.514438993'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1349.040630575
+        estimated_diameter_min: 603.309310875
+      kilometers:
+        estimated_diameter_max: 0.411187571
+        estimated_diameter_min: 0.1838886721
+      meters:
+        estimated_diameter_max: 411.1875710413
+        estimated_diameter_min: 183.8886720703
+      miles:
+        estimated_diameter_max: 0.2555000322
+        estimated_diameter_min: 0.1142630881
+    id: '3747306'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3747306?api_key=DEMO_KEY
+    name: (2016 EE157)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3747306
+    neo_reference_id: '3747306'
+  - absolute_magnitude_h: 22.8
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 11:06
+      epoch_date_close_approach: 1592391960000
+      miss_distance:
+        astronomical: '0.424738016'
+        kilometers: '63539902.50162592'
+        lunar: '165.223088224'
+        miles: '39481864.616120896'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '83707.7675680768'
+        kilometers_per_second: '23.2521576578'
+        miles_per_hour: '52012.7514647308'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 537.0627483999
+        estimated_diameter_min: 240.181762721
+      kilometers:
+        estimated_diameter_max: 0.1636967205
+        estimated_diameter_min: 0.0732073989
+      meters:
+        estimated_diameter_max: 163.696720474
+        estimated_diameter_min: 73.2073989347
+      miles:
+        estimated_diameter_max: 0.1017163949
+        estimated_diameter_min: 0.0454889547
+    id: '3753623'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3753623?api_key=DEMO_KEY
+    name: (2016 LB)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3753623
+    neo_reference_id: '3753623'
+  - absolute_magnitude_h: 24.3
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 08:50
+      epoch_date_close_approach: 1592383800000
+      miss_distance:
+        astronomical: '0.4288158365'
+        kilometers: '64149935.762668255'
+        lunar: '166.8093603985'
+        miles: '39860921.707421719'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '21717.8985995863'
+        kilometers_per_second: '6.032749611'
+        miles_per_hour: '13494.6576048374'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 269.1689931548
+        estimated_diameter_min: 120.3760332259
+      kilometers:
+        estimated_diameter_max: 0.0820427065
+        estimated_diameter_min: 0.0366906138
+      meters:
+        estimated_diameter_max: 82.0427064882
+        estimated_diameter_min: 36.6906137531
+      miles:
+        estimated_diameter_max: 0.0509789586
+        estimated_diameter_min: 0.0227984834
+    id: '3760681'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/3760681?api_key=DEMO_KEY
+    name: (2016 TA20)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3760681
+    neo_reference_id: '3760681'
+  - absolute_magnitude_h: 22.4
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 02:10
+      epoch_date_close_approach: 1592359800000
+      miss_distance:
+        astronomical: '0.1628512031'
+        kilometers: '24362193.110697397'
+        lunar: '63.3491180059'
+        miles: '15137964.8422301986'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '41168.0927565767'
+        kilometers_per_second: '11.4355813213'
+        miles_per_hour: '25580.2518575518'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 645.6914415591
+        estimated_diameter_min: 288.7619911632
+      kilometers:
+        estimated_diameter_max: 0.1968067451
+        estimated_diameter_min: 0.0880146521
+      meters:
+        estimated_diameter_max: 196.8067450894
+        estimated_diameter_min: 88.0146520901
+      miles:
+        estimated_diameter_max: 0.122290004
+        estimated_diameter_min: 0.0546897524
+    id: '54017279'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017279?api_key=DEMO_KEY
+    name: (2020 HC11)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017279
+    neo_reference_id: '54017279'
+  - absolute_magnitude_h: 24.0
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 07:21
+      epoch_date_close_approach: 1592378460000
+      miss_distance:
+        astronomical: '0.0175481206'
+        kilometers: '2625161.464263122'
+        lunar: '6.8262189134'
+        miles: '1631199.6941582036'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '39268.0279602378'
+        kilometers_per_second: '10.9077855445'
+        miles_per_hour: '24399.6254845155'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 309.0473542854
+        estimated_diameter_min: 138.2101784897
+      kilometers:
+        estimated_diameter_max: 0.0941976306
+        estimated_diameter_min: 0.0421264611
+      meters:
+        estimated_diameter_max: 94.1976305719
+        estimated_diameter_min: 42.1264610556
+      miles:
+        estimated_diameter_max: 0.0585316759
+        estimated_diameter_min: 0.0261761612
+    id: '54017263'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017263?api_key=DEMO_KEY
+    name: (2020 JU3)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017263
+    neo_reference_id: '54017263'
+  - absolute_magnitude_h: 26.9
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 21:30
+      epoch_date_close_approach: 1592429400000
+      miss_distance:
+        astronomical: '0.032044784'
+        kilometers: '4793831.43101008'
+        lunar: '12.465420976'
+        miles: '2978748.724815904'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '12411.1883983386'
+        kilometers_per_second: '3.4475523329'
+        miles_per_hour: '7711.829813401'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 81.2877363957
+        estimated_diameter_min: 36.3529808636
+      kilometers:
+        estimated_diameter_max: 0.0247765013
+        estimated_diameter_min: 0.0110803882
+      meters:
+        estimated_diameter_max: 24.7765012606
+        estimated_diameter_min: 11.0803882126
+      miles:
+        estimated_diameter_max: 0.0153953994
+        estimated_diameter_min: 0.0068850319
+    id: '54017184'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017184?api_key=DEMO_KEY
+    name: (2020 KF3)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017184
+    neo_reference_id: '54017184'
+  - absolute_magnitude_h: 23.6
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 19:13
+      epoch_date_close_approach: 1592421180000
+      miss_distance:
+        astronomical: '0.1126026502'
+        kilometers: '16845116.626275074'
+        lunar: '43.8024309278'
+        miles: '10467070.1070770612'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '38336.6143569859'
+        kilometers_per_second: '10.6490595436'
+        miles_per_hour: '23820.8812930949'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 371.5566426699
+        estimated_diameter_min: 166.1651821003
+      kilometers:
+        estimated_diameter_max: 0.1132504611
+        estimated_diameter_min: 0.0506471459
+      meters:
+        estimated_diameter_max: 113.2504610618
+        estimated_diameter_min: 50.6471458835
+      miles:
+        estimated_diameter_max: 0.0703705522
+        estimated_diameter_min: 0.0314706677
+    id: '54017252'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017252?api_key=DEMO_KEY
+    name: (2020 KD5)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017252
+    neo_reference_id: '54017252'
+  - absolute_magnitude_h: 20.9
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 01:41
+      epoch_date_close_approach: 1592358060000
+      miss_distance:
+        astronomical: '0.2329825451'
+        kilometers: '34853692.494138937'
+        lunar: '90.6302100439'
+        miles: '21657080.2637018506'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '92132.1535880974'
+        kilometers_per_second: '25.5922648856'
+        miles_per_hour: '57247.3373225597'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 1288.3238004408
+        estimated_diameter_min: 576.1559189633
+      kilometers:
+        estimated_diameter_max: 0.3926810818
+        estimated_diameter_min: 0.1756123185
+      meters:
+        estimated_diameter_max: 392.6810818086
+        estimated_diameter_min: 175.6123184804
+      miles:
+        estimated_diameter_max: 0.2440006365
+        estimated_diameter_min: 0.1091204019
+    id: '54017314'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017314?api_key=DEMO_KEY
+    name: (2020 KE7)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017314
+    neo_reference_id: '54017314'
+  - absolute_magnitude_h: 25.3
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 19:50
+      epoch_date_close_approach: 1592423400000
+      miss_distance:
+        astronomical: '0.0519110033'
+        kilometers: '7765775.523242971'
+        lunar: '20.1933802837'
+        miles: '4825429.1520201598'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '22469.9148539679'
+        kilometers_per_second: '6.241643015'
+        miles_per_hour: '13961.9312602336'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 169.8341531374
+        estimated_diameter_min: 75.9521422633
+      kilometers:
+        estimated_diameter_max: 0.0517654482
+        estimated_diameter_min: 0.0231502122
+      meters:
+        estimated_diameter_max: 51.7654482198
+        estimated_diameter_min: 23.150212221
+      miles:
+        estimated_diameter_max: 0.0321655483
+        estimated_diameter_min: 0.0143848705
+    id: '54017435'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017435?api_key=DEMO_KEY
+    name: (2020 LD1)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017435
+    neo_reference_id: '54017435'
+  - absolute_magnitude_h: 22.0
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 20:49
+      epoch_date_close_approach: 1592426940000
+      miss_distance:
+        astronomical: '0.0628021025'
+        kilometers: '9395060.765521675'
+        lunar: '24.4300178725'
+        miles: '5837820.056382115'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '37363.255552143'
+        kilometers_per_second: '10.3786820978'
+        miles_per_hour: '23216.073984608'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 776.2918559233
+        estimated_diameter_min: 347.1682720448
+      kilometers:
+        estimated_diameter_max: 0.2366137501
+        estimated_diameter_min: 0.1058168859
+      meters:
+        estimated_diameter_max: 236.6137501138
+        estimated_diameter_min: 105.8168859331
+      miles:
+        estimated_diameter_max: 0.1470249225
+        estimated_diameter_min: 0.0657515442
+    id: '54017545'
+    is_potentially_hazardous_asteroid: true
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017545?api_key=DEMO_KEY
+    name: (2020 LG2)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017545
+    neo_reference_id: '54017545'
+  - absolute_magnitude_h: 25.8
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 10:25
+      epoch_date_close_approach: 1592389500000
+      miss_distance:
+        astronomical: '0.0072628374'
+        kilometers: '1086505.005196338'
+        lunar: '2.8252437486'
+        miles: '675122.9043639444'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '37691.2385527788'
+        kilometers_per_second: '10.4697884869'
+        miles_per_hour: '23419.8698663086'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 134.9040630575
+        estimated_diameter_min: 60.3309310875
+      kilometers:
+        estimated_diameter_max: 0.0411187571
+        estimated_diameter_min: 0.0183888672
+      meters:
+        estimated_diameter_max: 41.1187571041
+        estimated_diameter_min: 18.388867207
+      miles:
+        estimated_diameter_max: 0.0255500032
+        estimated_diameter_min: 0.0114263088
+    id: '54017562'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54017562?api_key=DEMO_KEY
+    name: (2020 MZ)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54017562
+    neo_reference_id: '54017562'
+  - absolute_magnitude_h: 25.36
+    close_approach_data:
+    - close_approach_date: '2020-06-17'
+      close_approach_date_full: 2020-Jun-17 16:49
+      epoch_date_close_approach: 1592412540000
+      miss_distance:
+        astronomical: '0.244725414'
+        kilometers: '36610400.66926818'
+        lunar: '95.198186046'
+        miles: '22748648.107053684'
+      orbiting_body: Earth
+      relative_velocity:
+        kilometers_per_hour: '51584.0087263604'
+        kilometers_per_second: '14.3288913129'
+        miles_per_hour: '32052.2969777766'
+    estimated_diameter:
+      feet:
+        estimated_diameter_max: 165.2057009669
+        estimated_diameter_min: 73.8822355265
+      kilometers:
+        estimated_diameter_max: 0.050354696
+        estimated_diameter_min: 0.0225193047
+      meters:
+        estimated_diameter_max: 50.3546960434
+        estimated_diameter_min: 22.5193046679
+      miles:
+        estimated_diameter_max: 0.0312889478
+        estimated_diameter_min: 0.0139928429
+    id: '54374161'
+    is_potentially_hazardous_asteroid: false
+    is_sentry_object: false
+    links:
+      self: http://api.nasa.gov/neo/rest/v1/neo/54374161?api_key=DEMO_KEY
+    name: (2023 ME4)
+    nasa_jpl_url: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=54374161
+    neo_reference_id: '54374161'

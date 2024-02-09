@@ -1,0 +1,3 @@
+[idrac]
+idrac-host1 idrac_ip=10.0.0.89 idrac_user=root idrac_password=r0gerwilc0
+

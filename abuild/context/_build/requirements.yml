@@ -1,0 +1,10 @@
+---
+collections:
+- dellemc.os6
+- dellemc.os9
+- dellemc.os10
+- dellemc.powermax
+- dellemc.powerstore
+- dellemc.openmanage
+- community.general
+

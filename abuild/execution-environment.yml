@@ -1,0 +1,19 @@
+---
+version: 1
+
+build_arg_defaults:
+  # By default, the EE_BASE_IMAGE will point to a base image
+  # with the latest runner / ansible release
+  EE_BASE_IMAGE: 'quay.io/ansible/ansible-runner:stable-2.10-devel'
+
+dependencies:
+  galaxy: requirements.yml
+  python: requirements.txt
+  # system: bindep.txt   # this would contain cross platform requirements
+
+additional_build_steps:
+  prepend: |
+    RUN pip3 install --upgrade pip setuptools
+  append:
+    - RUN ls -la /etc
+
